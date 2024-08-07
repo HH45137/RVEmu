@@ -14,6 +14,8 @@ bazel-bin/
 bazel-out/
 bazel-testlogs/
 bazel-genfiles/
+MODULE.bazel
+MODULE.bazel.lock
 
 # Compiled object files, libraries, executables
 *.o
