@@ -1,6 +1,14 @@
 #include <iostream>
 
+#include <rv_cpu_32i.h>
+
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    RVEMU::CCpu32I cpu{};
+
+    cpu.Init();
+    cpu.Run("");
+    cpu.Stop();
+
     return 0;
 }
