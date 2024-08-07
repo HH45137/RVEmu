@@ -1,2 +1,48 @@
-/cmake-build-debug/
-/.idea
+# Ignore Visual Studio Code specific files
+.vscode/
+*.code-workspace
+
+# Ignore JetBrains CLion specific files
+.idea/
+*.iml
+*.iws
+out/
+
+# Bazel output files and directories
+bazel-*
+bazel-bin/
+bazel-out/
+bazel-testlogs/
+bazel-genfiles/
+
+# Compiled object files, libraries, executables
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# C++ specific ignores
+*.obj
+*.dll
+*.pch
+*.pdb
+*.ilk
+*.lib
+*.tmp
+*.log
+
+# Editor-specific files
+*~
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# System files
+.idea/
+.vscode/
+.vscode-test/
+*.sublime-project
+*.sublime-workspace
