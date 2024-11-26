@@ -45,7 +45,7 @@ std::string Logger::getCurrentTime() const {
     auto now = std::chrono::system_clock::now();
     std::time_t nowTime = std::chrono::system_clock::to_time_t(now);
     std::tm nowTm;
-    localtime_r(&nowTime, &nowTm);
+    // localtime_r(&nowTime, &nowTm);
     char buffer[30];
     std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &nowTm);
     return std::string(buffer);

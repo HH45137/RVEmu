@@ -48,3 +48,4 @@ Thumbs.db
 .vscode-test/
 *.sublime-project
 *.sublime-workspace
+/debug
