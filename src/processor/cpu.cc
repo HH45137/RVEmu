@@ -4,7 +4,7 @@
 namespace RVEmu::Processor {
 
 CPU::CPU(int numCores, size_t cacheLineSize, size_t cacheSize, size_t sharedMemorySize)
-    : m_sharedMemory(sharedMemorySize, 0), m_logger("CPU") {
+    : m_sharedMemory(sharedMemorySize, 0), m_logger("CPU"), m_instr() {
     if (numCores <= 0) {
         throw std::invalid_argument("Number of cores must be positive");
     }
@@ -63,4 +63,15 @@ uint8_t CPU::readFromSharedMemory(Register address) const {
     return m_sharedMemory[address];
 }
 
+void CPU::run()
+{
+    const auto *instr_addi = new instr_i_s{0x01F00093}; // ADDI x1, x0, 31
+    m_instr.executeInstruction(instr_addi);
+
+    const auto *instr_andi = new instr_i_s{0x01437293}; // andi x5, x6, 20
+    m_instr.executeInstruction(instr_andi);
+
+    const auto *instr_sub = new instr_r_s{0x407302B3}; // sub x5, x6, x7
+    m_instr.executeInstruction(instr_sub);
+}
 } // namespace RVEmu::CPU

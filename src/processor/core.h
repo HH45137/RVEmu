@@ -2,6 +2,7 @@
 
 #include <array>
 #include "cache.h"
+#include "instruction.h"
 
 namespace RVEmu::Processor {
 

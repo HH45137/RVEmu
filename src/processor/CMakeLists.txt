@@ -5,6 +5,8 @@ set(PROCESSOR_SRC
         core.h
         cpu.cc
         cpu.h
+        instruction.cc
+        instruction.h
 )
 
 add_library(Processor STATIC ${PROCESSOR_SRC})

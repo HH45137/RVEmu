@@ -11,6 +11,7 @@ void Emulator::initialize() {
 
 void Emulator::run() {
     m_logger.info("Running Emulator");
+    m_cpu.run();
 }
 
 Processor::CPU& Emulator::getCPU() {

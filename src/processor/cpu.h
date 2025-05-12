@@ -26,6 +26,8 @@ public:
     void writeToSharedMemory(Register address, uint8_t value);
     uint8_t readFromSharedMemory(Register address) const;
 
+    void run();
+
 private:
     std::vector<Core> m_cores;
     std::array<Register, NUM_SHARED_REGISTERS> m_sharedRegisters;
@@ -33,6 +35,7 @@ private:
     mutable std::mutex m_sharedMemoryMutex;
     mutable std::mutex m_sharedRegisterMutex;
     Logger m_logger;
+    instruction m_instr;
 };
 
 } // namespace RVEmu::CPU
